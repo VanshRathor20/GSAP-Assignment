@@ -47,28 +47,48 @@ const ScrollSection = () => {
       "<0.3",
     );
 
-    // Top cards animation (Yellow & Grey)
+    // 1. Yellow card animation
     tl.from(
-      topCardsRef.current,
+      topCardsRef.current[0],
       {
         opacity: 0,
         y: -50,
-        stagger: 0.2,
         duration: 0.3,
       },
       "<0.2",
     );
 
-    // Bottom cards animation (Blue & Orange)
+    // 2. Blue card animation
     tl.from(
-      bottomCardsRef.current,
+      bottomCardsRef.current[0],
       {
         opacity: 0,
         y: 50,
-        stagger: 0.2,
         duration: 0.3,
       },
-      "<0.2",
+      "<0.15",
+    );
+
+    // 3. Grey card animation
+    tl.from(
+      topCardsRef.current[1],
+      {
+        opacity: 0,
+        y: -50,
+        duration: 0.3,
+      },
+      "<0.15",
+    );
+
+    // 4. Orange card animation
+    tl.from(
+      bottomCardsRef.current[1],
+      {
+        opacity: 0,
+        y: 50,
+        duration: 0.3,
+      },
+      "<0.15",
     );
   }, [sectionRef]);
 
