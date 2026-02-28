@@ -103,19 +103,19 @@ const ScrollSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="h-screen bg-gray-300 flex flex-col items-center justify-center relative overflow-hidden"
+      className="h-screen bg-[#D1D1D1] flex flex-col items-center justify-center relative overflow-hidden"
     >
       {/* Black Road Section - Behind green banner */}
-      <div className="absolute w-full h-40 bg-black z-0"></div>
+      <div className="absolute w-full h-55 bg-black z-0 top-1/2 -translate-y-1/2"></div>
 
       {/* Green Banner with Text - On top of black */}
       <div
         ref={textRef}
-        className="absolute left-0 h-40 bg-[#2DD881] flex items-center z-10 overflow-hidden"
+        className="absolute left-0 h-55 bg-[#2DD881] flex items-center z-10 overflow-hidden top-1/2 -translate-y-1/2"
       >
         <h1
-          className="text-black font-black text-9xl tracking-tight whitespace-nowrap px-8"
-          style={{ fontFamily: "Arial Black, sans-serif" }}
+          className="text-black font-bold text-9xl tracking-wide  whitespace-nowrap px-7 pr-25"
+          style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
         >
           WELCOME ITZFIZZ
         </h1>

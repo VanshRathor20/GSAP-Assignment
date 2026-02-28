@@ -6,7 +6,7 @@ const Car = forwardRef((props, ref) => {
       ref={ref}
       src={car}
       alt="car"
-      className="absolute left-0 top-1/2 -translate-y-1/2 w-87 z-20"
+      className="absolute left-0 top-2/5 -translate-y-[60%] w-90 z-20"
     />
   );
 });
