@@ -19,9 +19,9 @@ const ScrollSection = () => {
 
   //scroll section animation
   useGSAP(() => {
-    // Set initial states
-    gsap.set(textRef.current, { width: "0%" });
-    gsap.set(carRef.current, { xPercent: -50, x: 0 });
+    // Set initial states - car starts at left, green banner hidden
+    gsap.set(textRef.current, { width: "5%" });
+    gsap.set(carRef.current, { left: "0%", xPercent: 0 });
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -33,19 +33,18 @@ const ScrollSection = () => {
       },
     });
 
-    // Car movement animation - starts immediately
+    // Car and green banner move together as one unit
+    // Both use left percentage for perfect sync
     tl.to(
       carRef.current,
       {
-        xPercent: 50,
-        x: "40vw",
+        left: "85%",
         ease: "none",
         duration: 1,
       },
       0,
     );
 
-    // Green banner with text reveal animation - synced with car
     tl.to(
       textRef.current,
       {
@@ -113,10 +112,9 @@ const ScrollSection = () => {
       <div
         ref={textRef}
         className="absolute left-0 h-40 bg-[#2DD881] flex items-center z-10 overflow-hidden"
-        style={{ width: "110%" }}
       >
         <h1
-          className="text-black font-black text-9xl tracking-light whitespace-nowrap px-8"
+          className="text-black font-black text-9xl tracking-tight whitespace-nowrap px-8"
           style={{ fontFamily: "Arial Black, sans-serif" }}
         >
           WELCOME ITZFIZZ
