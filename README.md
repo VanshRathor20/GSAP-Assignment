@@ -1,16 +1,140 @@
-# React + Vite
+### 🚗 ScrollDrive – GSAP Scroll Animation Project
+- An interactive scroll-based storytelling animation built using React, GSAP, ScrollTrigger, and Tailwind CSS.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- This project demonstrates advanced scroll-driven animations where a car moves horizontally while statistic cards appear sequentially using a GSAP timeline.
+  
+---
+## 🌐 Live Demo
+- 🔗 Live URL: https://scrolldrive.netlify.app/
+---
 
-Currently, two official plugins are available:
+## ✨ Features
+- 🚗 Smooth horizontal car movement on scroll
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📌 Pinned scroll section using ScrollTrigger
 
-## React Compiler
+- 🎯 Timeline-based sequential card animations
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🎨 Tailwind CSS styling
 
-## Expanding the ESLint configuration
+- ⚛️ Component-based React structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🧠 Clean animation synchronization
+
+---
+## 🛠️ Tech Stack
+- React
+  
+- GSAP
+
+- ScrollTrigger
+
+- Tailwind CSS
+
+- Vite
+
+---
+## 📁 Project Structure
+```
+├── 📁 Components
+│   ├── 📄 BlueCard.jsx
+│   ├── 📄 Car.jsx
+│   ├── 📄 GreyCard.jsx
+│   ├── 📄 OrangeCard.jsx
+│   ├── 📄 ScrollSection.jsx
+│   ├── 📄 StatsCard.jsx
+│   └── 📄 YellowCard.jsx
+├── 📁 assets
+│   ├── 🖼️ car.png
+│   └── 🖼️ react.svg
+├── 📄 App.jsx
+├── 🎨 index.css
+└── 📄 main.jsx
+```
+---
+## 🚀 How It Works
+
+- The ScrollSection component is pinned using ScrollTrigger.
+
+- A GSAP timeline controls:
+
+- The car’s horizontal movement.
+
+- Sequential appearance of statistic cards.
+
+- Animations are synchronized using scrub and timeline positioning.
+
+- Proper layering (z-index) ensures the car visually sits above the road strip.
+
+---
+## 📦 Installation
+
+1. Clone the repository:
+```
+git clone https://github.com/your-username/scrolldrive.git
+```
+  
+```
+cd scrolldrive
+```
+
+2. Install dependencies:
+```
+npm install
+```
+
+3. If installing manually, make sure these are installed:
+```
+npm install gsap
+```
+
+```
+npm install @gsap/react
+```
+
+4. Run the development server:
+```
+npm run dev
+```
+---
+
+## 🎯 Why Mention GSAP?
+
+- It’s not part of React by default
+
+- Recruiters can see you know external dependency setup
+
+- Makes your project look complete & professional
+---
+## 🎯 Learning Highlights
+
+- This project helped strengthen understanding of:
+
+- Scroll-based animations
+
+- Timeline synchronization
+
+- GSAP with React (useGSAP)
+
+- Component-level animation control
+
+- Layering & positioning with Tailwind
+---
+## 📸 Preview
+
+- Scroll to see the car drive across the screen while cards animate in sequence.
+---
+## 💡 Future Improvements
+
+- Add responsive breakpoints
+
+- Add easing variations
+
+- Improve performance optimization
+
+- Add smooth scroll library integration
+
+---
+## 👤 Author
+- Vansh Rathor
+- ScrollDrive
