@@ -29,13 +29,6 @@ const ScrollSection = () => {
       },
     });
 
-    // Text reveal animation
-    tl.from(textRef.current, {
-      x: "-100%",
-      opacity: 0,
-      duration: 0.5,
-    });
-
     //car movement animation
     tl.to(
       carRef.current,
@@ -43,6 +36,17 @@ const ScrollSection = () => {
         x: "85vw",
         ease: "none",
         duration: 1,
+      },
+      "<",
+    );
+
+    // Green banner with text reveal animation (appears with cards)
+    tl.from(
+      textRef.current,
+      {
+        width: "0%",
+        opacity: 0,
+        duration: 0.5,
       },
       "<0.3",
     );
@@ -55,7 +59,7 @@ const ScrollSection = () => {
         y: -50,
         duration: 0.3,
       },
-      "<0.2",
+      "<0.1",
     );
 
     // 2. Blue card animation
@@ -97,19 +101,22 @@ const ScrollSection = () => {
       ref={sectionRef}
       className="h-screen bg-gray-300 flex flex-col items-center justify-center relative overflow-hidden"
     >
-      {/* Green Banner with Text */}
-      <div className="absolute w-full h-40 bg-[#2DD881] flex items-center z-10">
+      {/* Black Road Section - Behind green banner */}
+      <div className="absolute w-full h-40 bg-black z-0"></div>
+
+      {/* Green Banner with Text - On top of black */}
+      <div
+        ref={textRef}
+        className="absolute left-0 h-40 bg-[#2DD881] flex items-center z-10 overflow-hidden"
+        style={{ width: "50%" }}
+      >
         <h1
-          ref={textRef}
-          className="text-black font-black text-8xl tracking-tight whitespace-nowrap px-8"
+          className="text-black font-black text-9xl tracking-tight whitespace-nowrap px-8"
           style={{ fontFamily: "Arial Black, sans-serif" }}
         >
           WELCOME ITZFIZZ
         </h1>
       </div>
-
-      {/* Black Road Section */}
-      <div className="absolute w-full h-40 bg-black top-[calc(50%+5rem)]"></div>
 
       {/* Car */}
       <Car ref={carRef} />
