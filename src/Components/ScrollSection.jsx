@@ -19,36 +19,41 @@ const ScrollSection = () => {
 
   //scroll section animation
   useGSAP(() => {
+    // Set initial states
+    gsap.set(textRef.current, { width: "0%" });
+    gsap.set(carRef.current, { xPercent: -50, x: 0 });
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top top",
-        end: "+=170%",
+        end: "+=150%",
         scrub: 1,
         pin: true,
       },
     });
 
-    //car movement animation
+    // Car movement animation - starts immediately
     tl.to(
       carRef.current,
       {
-        x: "85vw",
+        xPercent: 50,
+        x: "40vw",
         ease: "none",
         duration: 1,
       },
-      "<",
+      0,
     );
 
-    // Green banner with text reveal animation (appears with cards)
-    tl.from(
+    // Green banner with text reveal animation - synced with car
+    tl.to(
       textRef.current,
       {
-        width: "0%",
-        opacity: 0,
-        duration: 0.5,
+        width: "100%",
+        ease: "none",
+        duration: 1,
       },
-      "<0.3",
+      0,
     );
 
     // 1. Yellow card animation
@@ -57,9 +62,9 @@ const ScrollSection = () => {
       {
         opacity: 0,
         y: -50,
-        duration: 0.3,
+        duration: 0.2,
       },
-      "<0.1",
+      0.3,
     );
 
     // 2. Blue card animation
@@ -68,9 +73,9 @@ const ScrollSection = () => {
       {
         opacity: 0,
         y: 50,
-        duration: 0.3,
+        duration: 0.2,
       },
-      "<0.15",
+      0.4,
     );
 
     // 3. Grey card animation
@@ -79,9 +84,9 @@ const ScrollSection = () => {
       {
         opacity: 0,
         y: -50,
-        duration: 0.3,
+        duration: 0.2,
       },
-      "<0.15",
+      0.5,
     );
 
     // 4. Orange card animation
@@ -90,9 +95,9 @@ const ScrollSection = () => {
       {
         opacity: 0,
         y: 50,
-        duration: 0.3,
+        duration: 0.2,
       },
-      "<0.15",
+      0.6,
     );
   }, [sectionRef]);
 
