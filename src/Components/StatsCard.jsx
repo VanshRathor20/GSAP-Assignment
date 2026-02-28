@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { forwardRef } from "react";
+import BlueCard from "./BlueCard";
+import GreyCard from "./GreyCard";
+import OrangeCard from "./OrangeCard";
+import YellowCard from "./YellowCard";
 
-const StatsCard = () => {
+
+const StatsCard = forwardRef((ref) => {
   return (
-    <div>StatsCard</div>
-  )
-}
+    <div
+      ref={ref}
+      
+    >
+      <YellowCard />
+      <BlueCard />
+      <GreyCard />
+      <OrangeCard />
+    </div>
+  );
+});
 
-export default StatsCard
+export default StatsCard;
