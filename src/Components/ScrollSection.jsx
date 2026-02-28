@@ -23,7 +23,7 @@ const ScrollSection = () => {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top top",
-        end: "+=150%",
+        end: "+=170%",
         scrub: 1,
         pin: true,
       },
@@ -108,10 +108,10 @@ const ScrollSection = () => {
       <div
         ref={textRef}
         className="absolute left-0 h-40 bg-[#2DD881] flex items-center z-10 overflow-hidden"
-        style={{ width: "50%" }}
+        style={{ width: "110%" }}
       >
         <h1
-          className="text-black font-black text-9xl tracking-tight whitespace-nowrap px-8"
+          className="text-black font-black text-9xl tracking-light whitespace-nowrap px-8"
           style={{ fontFamily: "Arial Black, sans-serif" }}
         >
           WELCOME ITZFIZZ
