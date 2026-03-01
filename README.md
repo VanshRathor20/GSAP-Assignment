@@ -5,7 +5,7 @@
   
 ---
 ## 🌐 Live Demo
-- 🔗 Live URL: https://scrolldrive.netlify.app/
+- 🔗 Live URL: https://vanshrathor20.github.io/GSAP-Assignment/
 ---
 
 ## ✨ Features
